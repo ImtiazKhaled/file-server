@@ -4,12 +4,17 @@
   "description": "a simple web server",
   "main": "index.js",
   "scripts": {
-    "test": "npm start"
+    "start": "nodemon index.js"
   },
   "author": "Imtiaz",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
