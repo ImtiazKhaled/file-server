@@ -4,7 +4,7 @@ const initState = {
     files: [],
 }
 
-const request_url = 'http://localhost:8080/'
+const request_url = 'http://34.68.138.86/:8080/'
 
 const RootReducer = async(state = initState, action) => {
     switch(action.type) {

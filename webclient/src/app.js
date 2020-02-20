@@ -14,7 +14,7 @@ const App = (props) => {
   return <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path='/public' component={Page} />
+        <Route path='/home' component={Page} />
         <Route component={Home} />
       </Switch>
       </BrowserRouter>
