@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Breadcrumb } from 'antd'
+import { withRouter } from 'react-router-dom'
 
 const Breadcrumbs = (props) => {
     
@@ -11,12 +12,21 @@ const Breadcrumbs = (props) => {
         changeCurrDir(object.currDir)
     })
 
+    const route = (index) => {
+        var newUrl = ''
+        for(var i = 1; i <= index; i++) {
+            newUrl += `/${currDir[i]}`
+        }
+
+        props.history.push(newUrl)
+    }
+
     if(currDir !== undefined)
         return <Breadcrumb>
         { 
-            currDir.map( dirName => {
+            currDir.map( (dirName, index) => {
                 return <Breadcrumb.Item key={dirName}>
-                    <span className='breadcrumb-text'> {dirName} </span>
+                    <span onClick={() => route(index)}className='breadcrumb-text'> {dirName} </span>
                 </Breadcrumb.Item>
             })
         }
@@ -24,4 +34,4 @@ const Breadcrumbs = (props) => {
     else return <div />
 }
 
-export default Breadcrumbs
+export default withRouter(Breadcrumbs)
