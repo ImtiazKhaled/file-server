@@ -12,17 +12,18 @@ const getFiles = path =>
 readdirSync(path)
 .filter( file => !statSync(join(path, file)).isDirectory() ) 
 
-
 router.use('/', (req, res) => {
-    console.log(req.url)
-    var files = getFiles(__dirname+req.url)
-    var dirs = getDirs(__dirname+req.url)
-    console.log(files, dirs)
-    // console.log("hello")
-    res.send({
-        files: files,
-        dirs: dirs
-    })
+    // console.log(req.body)
+    if(req.body.type == 'GET_DATA') {
+        var files = getFiles(__dirname+req.body.url)
+        var dirs = getDirs(__dirname+req.body.url)
+        res.send({
+            files: files,
+            dirs: dirs
+        })
+    } else {
+        res.sendFile(__dirname+req.body.url+`/${req.body.filename}`)
+    }
 })
 
 module.exports = router
