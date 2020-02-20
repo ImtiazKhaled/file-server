@@ -1,0 +1,141 @@
+@import '~antd/dist/antd.css';
+:root {
+    --background-color: #011627;
+    --link-color: #f78c6c;
+    --link-color-hover: #f86c6c;
+    --special-text-color: #22da6e;
+    --normal-text-color: #637777;
+    --special-text-color-two: #00cccc;
+    --alternate-background: #eeeeee;
+    --text-size: 0.90em;
+    --text-size-contact: 1.9em;
+    --divider-text: 3em;
+    --resume-button-padding: 35vw
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --text-size: 0.75em;
+        --text-size-contact: 1.4em;
+        --divider-text: 1.2em;
+        --resume-button-padding: 5vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 1.5em;
+        --resume-button-padding: 15vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 2em;
+        --resume-button-padding: 30vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 2.3em;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.full-page {
+    min-height: 100vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.theme-identifier {
+    color: var(--alternate-background);
+}
+
+.theme-button {
+    background: var(--alternate-background);
+}
+
+.theme-container {
+    padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.file-title {
+    font-size: 3em;
+    color: var(--link-color);
+    margin-left: 5vw;
+    margin-top: 3vw;
+}
+
+.breadcrumb-text {
+    color: var(--special-text-color);    
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.file-list-text {
+    font-size: 1.5em;
+    color: var(--normal-text-color);
+}
+
+.file-explorer {
+    cursor: pointer;
+}
+
+.breadcrumb-text:hover {
+    color: var(--special-text-color-two);
+}
+
+.breadcrumb-text:active {
+    color: var(--special-text-color-two);
+}
+
+.ant-breadcrumb-separator {
+    color: var(--special-text-color);
+    font-size: 1.5em;
+}
+
+.ant-divider {
+    background-color: var(--alternate-background);
+}
+
+.card-container {
+    padding: 1vw;
+}
+
+.lm-4 {
+    margin-left: 4vw;
+}
+
+.rm-4 {
+    margin-right: 4vw;
+}
+
+.rm-1 {
+    margin-right: 1vw;
+}
+
+.background {
+    background-color: transparent;
+    border-color: transparent;
+}
